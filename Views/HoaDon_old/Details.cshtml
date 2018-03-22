@@ -1,0 +1,73 @@
+﻿@model QLKS.Models.tblHoaDon
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>tblHoaDon</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayName("Mã hóa đơn")
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.ma_hd)
+        </dd>
+        <dt>
+            @Html.DisplayName("Ngày trả phòng")
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.tblPhieuDatPhong.ngay_ra)
+        </dd>
+
+        <dt>
+            @Html.DisplayName("Phụ thu")
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.phu_thu)
+        </dd>
+
+        <dt>
+            @Html.DisplayName("Tiền phòng")
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.tblChiTietHoaDon.tien_phong)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.tblNhanVien.ho_ten)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.tblNhanVien.ho_ten)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.tblPhieuDatPhong.ma_kh)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.tblPhieuDatPhong.ma_kh)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.tblTinhTrangHoaDon.mo_ta)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.tblTinhTrangHoaDon.mo_ta)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.ma_hd }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
